@@ -1,38 +1,247 @@
-.App {
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: fantasy;
+}
+
+body {
+  height: 748px;
+  background-color: #222022;
+}
+
+.all-hold {
+  height: 632px;
+}
+
+strong {
+  font-weight: normal;
+  color: #50aaee;
+}
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+a::selection,
+div::selection {
+  background-color: #f5f5db;
+  color: #111;
+}
+
+/* Navigation */
+
+.top-nav {
+  background-color: #554444;
+  padding: 15px;
+  height: 116px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.brand-hold {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-self: stretch;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link {
+  color: #c7c733;
+  margin: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link:hover {
+  color: #dbdb5f;
+  text-shadow: 0 0 2px #111;
+}
+
+.nav-link:active {
+  color: #bbbb20;
+}
+
+.navbar-brand {
+  color: #e7e7a3;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.navbar-brand:hover {
+  color: #f5f5db;
+  text-shadow: 0 0 2px #111;
+}
+
+.navbar-brand:active {
+  color: #c4c490;
+}
+
+/* Extra */
+
+.home-card-text {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #dbdb5f;
+  text-shadow: 0 0 2px #111;
+}
+
+.mb-4 {
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #dbdb5f;
+  text-shadow: 0 0 4px #111;
+}
+
+.card-text {
+  color: #60bbff;
+  text-shadow: 0 0 1px #111;
+}
+
+.card-subtitle,
+.card-link {
+  font-size: 1rem;
+  color: #60bbff;
+  text-shadow: 0 0 1px #111;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  background-color: #707070;
+  border-radius: 15px;
+}
+
+.bg-white {
+  background-color: #f5f5db;
+}
+
+.card-footer {
+  padding: 5px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.btn-outline-primary {
+  background-color: #c7c733;
+  border: 2px solid #bbbb20;
+  color: #e7e7a3;
+  text-decoration: none;
+  text-shadow: 0 0 2px #111;
+  box-shadow: 0 0 2px #111;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:visited:hover {
+  color: #60bbff;
+}
+
+.btn-outline-primary:visited {
+  color: #dbdb5f;
+}
+
+.shadow-sm {
+  box-shadow: 0 0 2px #111;
+}
+
+.shadow-lg {
+  box-shadow: 0 0 4px #111;
+}
+
+.form-control {
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+  background-color: #111;
+  border: 2px double #f5f5db;
+  color: #f5f5db;
+  border-radius: 5px;
+}
+
+.form-control:focus-visible {
+  outline: 0;
+}
+
+.form-control:focus {
+  border: 2px double #c4c490;
+}
+
+.list-group-item {
+  font-size: medium;
+}
+
+.list-group-item #text {
+  text-wrap: wrap;
+}
+
+.row {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 800px) {
+  /* Navigation (Large) */
+  .nav-link {
+    font-size: 1.4rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    width: 360px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .vstack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
